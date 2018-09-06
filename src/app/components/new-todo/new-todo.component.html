@@ -1,0 +1,25 @@
+<div class="container">
+  <ngx-spinner
+      bdColor="rgba(51,51,51,0.8)"
+      size="medium"
+      color="#fff"
+      type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+  </ngx-spinner>
+  <div class="card card-body">
+    <form>
+      <div class="form-group">
+        <label for="new-todo">New todo</label>
+        <input type="text"
+               name="new-todo"
+               id="new-todo"
+               class="form-control"
+               [(ngModel)]="formData.title"
+               required
+        >
+      </div>
+      <button class="btn btn-primary mr-3" (click)="onAdd()">Add</button>
+      <button routerLink="/" class="btn btn-primary">Cansel</button>
+    </form>
+  </div>
+</div>
