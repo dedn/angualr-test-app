@@ -6,7 +6,7 @@ import {HomeComponent} from './components/home/home.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {NotFoundComponent} from './components/not-found/not-found.component';
 import {TodoEditComponent} from './components/todo-edit/todo-edit.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import {RoutingModule} from "./routing.module";
@@ -15,6 +15,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
 import {NgxSpinnerModule} from "ngx-spinner";
 import { LoginComponent } from './components/login/login.component';
+import {MySlicePipe} from "./pipes/myPipes.pipe";
+import {JoinPipe} from "./pipes/join.pipe";
+import { BgDirective } from './directives/bg.directive';
+import { MyIfDirective } from './directives/my-if.directive';
+import { TestcompComponent } from './components/testcomp/testcomp.component';
 
 
 @NgModule({
@@ -26,6 +31,12 @@ import { LoginComponent } from './components/login/login.component';
     TodoEditComponent,
     NewTodoComponent,
     LoginComponent,
+      MySlicePipe,
+      JoinPipe,
+      BgDirective,
+      MyIfDirective,
+      TestcompComponent,
+
 
   ],
   imports: [
@@ -37,7 +48,8 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+      ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
